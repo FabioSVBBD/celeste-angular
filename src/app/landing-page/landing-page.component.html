@@ -1,28 +1,16 @@
-<article class="flex flex-col items-center justify-around w-full h-full">
+<app-home-leaves></app-home-leaves>
+<article
+  class="fixed flex flex-col items-center justify-around w-full h-full z-10"
+>
   <section class="text-center font-oleo space-y-2">
-    <h1 class="text-4xl title-shadow border-b-2 border-b-primary-gold">
-      Céleste
-    </h1>
+    <app-title [border]="true">Céleste</app-title>
     <h2 class="text-md">It's an experience</h2>
   </section>
 
-  <section class="flex flex-col text-center space-y-2 text-md">
-    <a>Tasting Menu</a>
-    <a>A La Carte Menu</a>
-  </section>
-
-  <section class="absolute w-full h-full">
-    <img
-      src="../assets/images/branches/left-branch.svg"
-      class="absolute w-80 h-80 left-[-20%]"
-    />
-    <img
-      src="../assets/images/branches/right-branch.svg"
-      class="absolute w-80 h-80 right-[-15%] top-[20%]"
-    />
-    <img
-      src="../assets/images/branches/bottom-branch.svg"
-      class="absolute w-80 h-80 bottom-[-10%]"
-    />
-  </section>
+  <nav class="flex flex-col text-center space-y-2 text-md">
+    <a class="hover:text-primary-grey" routerLink="/tasting-menu">
+      Tasting Menu
+    </a>
+    <a class="hover:text-primary-grey">A La Carte Menu</a>
+  </nav>
 </article>

@@ -1,0 +1,5 @@
+.title-shadow {
+  text-shadow: -1px 0 var(--primary-gold), 0 1px var(--primary-gold),
+    1px 0 var(--primary-gold), 0 -1px var(--primary-gold),
+    0px 0px 10px var(--primary-gold);
+}
