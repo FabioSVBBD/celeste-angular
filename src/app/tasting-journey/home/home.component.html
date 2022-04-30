@@ -1,5 +1,15 @@
-<article class="flex flex-col w-full h-full justify-between p-8 items-center">
+<article
+  class="flex flex-col w-full h-full justify-between p-8 items-center space-y-16"
+>
   <app-title class="text-3xl font-oleo">Tasting Menu</app-title>
+
+  <app-menu-box>
+    <app-menu-item
+      *ngFor="let entry of menu"
+      primary="{{ entry.primary }}"
+      secondary="{{ entry.secondary }}"
+    ></app-menu-item>
+  </app-menu-box>
 
   <section class="flex justify-center w-full space-x-4">
     <app-button class="w-2/5" type="secondary">Menu</app-button>

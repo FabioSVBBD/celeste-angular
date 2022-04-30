@@ -9,6 +9,7 @@ import { TitleComponent } from './components/title/title.component';
 import { HomeLeavesComponent } from './components/home-leaves/home-leaves.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { MenuBoxComponent } from './components/menu-box/menu-box.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
     HomeLeavesComponent,
     ButtonComponent,
     MenuItemComponent,
+    MenuBoxComponent,
   ],
   imports: [
     BrowserModule,
