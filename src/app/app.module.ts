@@ -10,6 +10,7 @@ import { HomeLeavesComponent } from './components/home-leaves/home-leaves.compon
 import { ButtonComponent } from './components/button/button.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MenuBoxComponent } from './components/menu-box/menu-box.component';
+import { OrderToolComponent } from './components/order-tool/order-tool.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { MenuBoxComponent } from './components/menu-box/menu-box.component';
     ButtonComponent,
     MenuItemComponent,
     MenuBoxComponent,
+    OrderToolComponent,
   ],
   imports: [
     BrowserModule,

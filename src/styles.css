@@ -18,3 +18,7 @@
   --primary-grey: theme("colors.primary-grey");
   --primary-black: theme("colors.primary-black");
 }
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}

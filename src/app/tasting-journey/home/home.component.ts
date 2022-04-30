@@ -12,4 +12,12 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  backClicked(): void {
+    console.log('Back Button Clicked');
+  }
+
+  viewOrderClicked(): void {
+    console.log('View Order Clicked');
+  }
 }

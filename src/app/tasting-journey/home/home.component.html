@@ -9,10 +9,18 @@
       primary="{{ entry.primary }}"
       secondary="{{ entry.secondary }}"
     ></app-menu-item>
+
+    <section class="w-5/6 m-auto pb-8">
+      <app-order-tool></app-order-tool>
+    </section>
   </app-menu-box>
 
   <section class="flex justify-center w-full space-x-4">
-    <app-button class="w-2/5" type="secondary">Menu</app-button>
-    <app-button class="w-3/5">View Order</app-button>
+    <app-button class="w-2/5" type="secondary" (click)="backClicked()"
+      >Back</app-button
+    >
+    <app-button class="w-3/5" (click)="viewOrderClicked()"
+      >View Order</app-button
+    >
   </section>
 </article>
