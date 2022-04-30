@@ -1,0 +1,9 @@
+<button
+  class="flex justify-center w-full px-4 rounded-full font-oleo text-md border-[3px]"
+  [ngClass]="{
+    'bg-white text-primary-black border-white': type === 'primary',
+    'bg-transparent text-primary-grey border-primary-grey': type === 'secondary'
+  }"
+>
+  <ng-content></ng-content>
+</button>

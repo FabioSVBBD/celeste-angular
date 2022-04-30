@@ -7,6 +7,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomeComponent as TastingMenuHome } from './tasting-journey/home/home.component';
 import { TitleComponent } from './components/title/title.component';
 import { HomeLeavesComponent } from './components/home-leaves/home-leaves.component';
+import { ButtonComponent } from './components/button/button.component';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { HomeLeavesComponent } from './components/home-leaves/home-leaves.compon
     TastingMenuHome,
     TitleComponent,
     HomeLeavesComponent,
+    ButtonComponent,
+    MenuItemComponent,
   ],
   imports: [
     BrowserModule,
