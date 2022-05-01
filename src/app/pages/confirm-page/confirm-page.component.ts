@@ -7,16 +7,23 @@ import { state } from '../../../assets/state/state';
   styleUrls: ['./confirm-page.component.css'],
 })
 export class ConfirmPageComponent implements OnInit {
-  data: { [key: string]: { name: string; quantity: number; amount: number } };
   total: number;
 
   constructor() {
-    this.data = state;
-
-    this.total = Object.values(this.data).reduce(
+    this.total = Object.values(state).reduce(
       (total, current) => total + current.quantity * current.amount,
       0
     );
+  }
+
+  getState() {
+    return state;
+  }
+
+  updateQuantityOf(quantity: number, key: string) {
+    console.log('quantity updated for', key, ':', quantity);
+
+    state[key].quantity = quantity;
   }
 
   ngOnInit(): void {}

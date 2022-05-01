@@ -3,10 +3,11 @@
 
   <app-gold-box>
     <app-order-item
-      *ngFor="let entry of data | keyvalue"
+      *ngFor="let entry of getState() | keyvalue; let i = index"
       [title]="entry.value.name"
       [price]="entry.value.amount"
       [quantity]="entry.value.quantity"
+      (quantityEvent)="updateQuantityOf($event, entry.key)"
     ></app-order-item>
   </app-gold-box>
 
