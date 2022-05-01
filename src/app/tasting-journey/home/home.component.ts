@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { menu } from '../../../assets/data/tasting-menu';
+import { state } from '../../../assets/state/state';
 
 @Component({
   selector: 'app-home',
@@ -10,21 +12,23 @@ export class HomeComponent {
   menu = menu;
   personCount: number;
 
-  constructor() {
+  constructor(private router: Router) {
     this.personCount = 0;
   }
 
   updateCounter(count: number) {
     this.personCount = count;
 
-    console.log('counter updated', this.personCount);
+    state.push({ name: 'Tasting Menu', quantity: count, amount: 100 });
+
+    console.log('counter updated', this.personCount, state);
   }
 
   backClicked(): void {
-    console.log('Back Button Clicked');
+    this.router.navigate(['']);
   }
 
   viewOrderClicked(): void {
-    console.log('View Order Clicked');
+    this.router.navigate(['confirm']);
   }
 }

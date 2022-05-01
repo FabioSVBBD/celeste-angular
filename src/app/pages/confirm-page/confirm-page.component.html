@@ -1,7 +1,13 @@
 <article class="flex flex-col w-full h-full items-center p-8 space-y-8">
   <app-title class="font-oleo text-3xl">Confirm your order</app-title>
 
-  <app-gold-box> Order Details </app-gold-box>
+  <app-gold-box>
+    <section *ngFor="let elem of data">
+      <p>{{ elem.name }}</p>
+      <p>{{ elem.quantity }}</p>
+      <p>{{ elem.amount }}</p>
+    </section>
+  </app-gold-box>
 
   <section class="flex justify-between items-end w-11/12 font-oleo">
     <p class="text-md">Subtotal</p>
