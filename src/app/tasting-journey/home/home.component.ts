@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { menu } from '../../../assets/data/tasting-menu';
 
 @Component({
@@ -6,12 +6,19 @@ import { menu } from '../../../assets/data/tasting-menu';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   menu = menu;
+  personCount: number;
 
-  constructor() {}
+  constructor() {
+    this.personCount = 0;
+  }
 
-  ngOnInit(): void {}
+  updateCounter(count: number) {
+    this.personCount = count;
+
+    console.log('counter updated', this.personCount);
+  }
 
   backClicked(): void {
     console.log('Back Button Clicked');

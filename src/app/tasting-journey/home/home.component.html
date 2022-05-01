@@ -11,7 +11,10 @@
     ></app-menu-item>
 
     <section class="w-5/6 m-auto pb-8">
-      <app-order-tool></app-order-tool>
+      <app-order-tool
+        [counter]="personCount"
+        (countEvent)="updateCounter($event)"
+      ></app-order-tool>
     </section>
   </app-menu-box>
 
