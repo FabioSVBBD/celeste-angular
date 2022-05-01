@@ -3,7 +3,7 @@
 >
   <app-title class="text-3xl font-oleo">Tasting Menu</app-title>
 
-  <app-menu-box>
+  <app-gold-box>
     <app-menu-item
       *ngFor="let entry of menu"
       primary="{{ entry.primary }}"
@@ -16,7 +16,7 @@
         (countEvent)="updateCounter($event)"
       ></app-order-tool>
     </section>
-  </app-menu-box>
+  </app-gold-box>
 
   <section class="flex justify-center w-full space-x-4">
     <app-button class="w-2/5" type="secondary" (click)="backClicked()"

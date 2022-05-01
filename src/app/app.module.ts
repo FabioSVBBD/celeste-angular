@@ -9,7 +9,7 @@ import { TitleComponent } from './components/title/title.component';
 import { HomeLeavesComponent } from './components/home-leaves/home-leaves.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
-import { MenuBoxComponent } from './components/menu-box/menu-box.component';
+import { GoldBoxComponent } from './components/gold-box/gold-box.component';
 import { OrderToolComponent } from './components/order-tool/order-tool.component';
 import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.component';
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
@@ -23,7 +23,7 @@ import { SummaryPageComponent } from './pages/summary-page/summary-page.componen
     HomeLeavesComponent,
     ButtonComponent,
     MenuItemComponent,
-    MenuBoxComponent,
+    GoldBoxComponent,
     OrderToolComponent,
     ConfirmPageComponent,
     SummaryPageComponent,
@@ -33,6 +33,8 @@ import { SummaryPageComponent } from './pages/summary-page/summary-page.componen
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent },
       { path: 'tasting-menu', component: TastingMenuHome },
+      { path: 'confirm', component: ConfirmPageComponent },
+      { path: 'summary', component: SummaryPageComponent },
     ]),
   ],
   providers: [],
