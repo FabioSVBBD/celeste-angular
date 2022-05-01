@@ -2,16 +2,17 @@
   <app-title class="font-oleo text-3xl">Confirm your order</app-title>
 
   <app-gold-box>
-    <section *ngFor="let elem of data">
-      <p>{{ elem.name }}</p>
-      <p>{{ elem.quantity }}</p>
-      <p>{{ elem.amount }}</p>
-    </section>
+    <app-order-item
+      *ngFor="let elem of data"
+      [title]="elem.name"
+      [price]="elem.amount"
+      [quantity]="elem.quantity"
+    ></app-order-item>
   </app-gold-box>
 
   <section class="flex justify-between items-end w-11/12 font-oleo">
     <p class="text-md">Subtotal</p>
-    <p class="text-primary-gold text-lg">R1 040.00</p>
+    <p class="text-primary-gold text-lg">{{ total | currency: "R " }}</p>
   </section>
 
   <section class="flex justify-center w-full space-x-4">

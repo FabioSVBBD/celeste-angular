@@ -13,11 +13,17 @@ const stubData = [
   styleUrls: ['./confirm-page.component.css'],
 })
 export class ConfirmPageComponent implements OnInit {
-  data: any;
+  data: { name: string; quantity: number; amount: number }[];
+  total: number;
   stub: boolean = true;
 
   constructor() {
     this.data = this.stub ? stubData : state;
+
+    this.total = this.data.reduce(
+      (total, current) => total + current.quantity * current.amount,
+      0
+    );
   }
 
   ngOnInit(): void {}

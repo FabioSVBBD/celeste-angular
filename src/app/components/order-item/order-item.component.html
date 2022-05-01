@@ -1,1 +1,19 @@
-<p>order-item works!</p>
+<section class="w-full bg-secondary-black px-6 py-2 rounded-3xl space-y-2 mb-4">
+  <header class="flex justify-between text-xs">
+    <p class="font-bold tracking-wide">{{ title }}</p>
+    <p class="text-primary-gold font-oleo">{{ price | currency: "R " }}</p>
+  </header>
+  <footer class="flex justify-around items-center">
+    <img
+      class="w-5 h-5"
+      src="../../../assets/images/decrement.svg"
+      (click)="decrement()"
+    />
+    <p class="font-oleo text-lg">{{ quantity }}</p>
+    <img
+      class="w-5 h-5"
+      src="../../../assets/images/increment.svg"
+      (click)="increment()"
+    />
+  </footer>
+</section>
