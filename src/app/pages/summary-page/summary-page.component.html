@@ -1,1 +1,66 @@
-<p>summary-page works!</p>
+<article class="flex flex-col items-center w-full h-full p-8 space-y-8">
+  <app-title class="font-oleo text-3xl">Summary</app-title>
+
+  <app-gold-box>
+    <section
+      *ngIf="hasTastingData"
+      class="flex justify-between items-end w-full"
+    >
+      <section class="space-y-1">
+        <h2 class="font-oleo text-lg">Tasting Menu</h2>
+        <section class="ml-8">
+          <p>Number of Persons</p>
+          <p>Cost</p>
+        </section>
+      </section>
+
+      <section class="space-y-1">
+        <p class="text-primary-gold">
+          {{
+            getTastingData().amount | currency: "ZAR":"symbol-narrow":"1.0-0"
+          }}
+          pp
+        </p>
+        <p class="text-primary-gold">{{ getTastingData().quantity }} people</p>
+        <p class="text-primary-gold">
+          {{
+            getTastingData().quantity * getTastingData().amount
+              | currency: "ZAR":"symbol-narrow":"1.2-2"
+          }}
+        </p>
+      </section>
+    </section>
+
+    <section *ngIf="hasCarteData" class="mt-4">
+      <h2 class="font-oleo text-lg">A La Carte Menu</h2>
+
+      <section class="ml-2">
+        <section
+          *ngFor="let entry of getCarteData()"
+          class="flex flex-row justify-between w-full"
+        >
+          <p>{{ entry.quantity }}x</p>
+          <p class="flex-grow ml-2">{{ entry.name }}</p>
+          <p class="text-primary-gold">
+            {{ entry.amount | currency: "ZAR":"symbol-narrow":"1.2-2" }}
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <section class="my-12">
+      <h2 class="font-oleo text-lg">Would you like to add a tip?</h2>
+    </section>
+
+    <section class="flex w-full justify-between font-oleo">
+      <h3>Total Cost</h3>
+      <p class="text-primary-gold">
+        {{ getTotal() | currency: "ZAR":"symbol-narrow":"1.2-2" }}
+      </p>
+    </section>
+  </app-gold-box>
+
+  <app-button class="w-full" (click)="payClicked()"
+    >Pay with VodaPay</app-button
+  >
+</article>
