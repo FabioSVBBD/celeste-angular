@@ -16,18 +16,15 @@ export class OrderToolComponent implements OnInit {
 
   increment() {
     this.counter++;
-
-    this.emitCounter();
   }
 
   decrement() {
     if (this.counter > 0) {
       this.counter--;
-      this.emitCounter();
     }
   }
 
-  emitCounter() {
+  addToOrderClicked() {
     this.countEvent.emit(this.counter);
   }
 

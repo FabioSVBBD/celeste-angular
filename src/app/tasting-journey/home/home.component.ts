@@ -19,7 +19,7 @@ export class HomeComponent {
   updateCounter(count: number) {
     this.personCount = count;
 
-    state.push({ name: 'Tasting Menu', quantity: count, amount: 100 });
+    state.tastingMenu = { name: 'Tasting Menu', quantity: count, amount: 100 };
 
     console.log('counter updated', this.personCount, state);
   }

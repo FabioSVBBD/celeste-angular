@@ -3,10 +3,10 @@
 
   <app-gold-box>
     <app-order-item
-      *ngFor="let elem of data"
-      [title]="elem.name"
-      [price]="elem.amount"
-      [quantity]="elem.quantity"
+      *ngFor="let entry of data | keyvalue"
+      [title]="entry.value.name"
+      [price]="entry.value.amount"
+      [quantity]="entry.value.quantity"
     ></app-order-item>
   </app-gold-box>
 
