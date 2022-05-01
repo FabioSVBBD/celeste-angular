@@ -17,7 +17,11 @@
   </section>
 
   <section class="flex justify-center w-full space-x-4">
-    <app-button class="w-2/5" type="secondary">Menu</app-button>
-    <app-button class="w-3/5">Confirm Order</app-button>
+    <app-button (click)="menuClicked()" class="w-2/5" type="secondary"
+      >Menu</app-button
+    >
+    <app-button (click)="confirmOrderClicked()" class="w-3/5"
+      >Confirm Order</app-button
+    >
   </section>
 </article>
