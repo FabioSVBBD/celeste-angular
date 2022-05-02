@@ -6,13 +6,12 @@ import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
   styleUrls: ['./order-tool.component.css'],
 })
 export class OrderToolComponent implements OnInit {
-  @Input() counter: number;
+  @Input() counter: number = 0;
+  @Input() detailed: boolean = false;
 
   @Output() countEvent = new EventEmitter<number>();
 
-  constructor() {
-    this.counter = 0;
-  }
+  constructor() {}
 
   increment() {
     this.counter++;

@@ -1,4 +1,4 @@
-<article class="w-full mt-4 text-center">
+<article class="flex flex-col items-center w-full mt-4">
   <section class="flex justify-around items-center w-3/5 m-auto">
     <img
       class="w-6 h-6"
@@ -13,10 +13,10 @@
     />
   </section>
 
-  <h4 class="text-xs">Number of Person</h4>
-  <p class="font-oleo text-primary-grey">R100 per person</p>
+  <h4 *ngIf="detailed" class="text-xs">Number of Person</h4>
+  <p *ngIf="detailed" class="font-oleo text-primary-grey">R100 per person</p>
 
-  <footer class="mt-4">
+  <footer class="mt-4 w-3/4">
     <app-button (click)="addToOrderClicked()">Add to Order</app-button>
   </footer>
 </article>

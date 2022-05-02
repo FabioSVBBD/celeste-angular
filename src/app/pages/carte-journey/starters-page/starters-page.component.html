@@ -3,15 +3,23 @@
 
   <app-gold-box>
     <app-menu-item
-      primary="Grilled Peaches"
-      secondary="Grilled peach, goat's cheese, peach chutney, rocket, mixed seed crackers and onion ash"
-      [price]="150"
+      *ngFor="let entry of getStarters()"
+      [primary]="entry.title"
+      [secondary]="entry.description"
+      [price]="entry.price"
       [detailed]="true"
-    ></app-menu-item>
+      [selected]="itemAddedToOrder(entry.title)"
+    >
+      <app-order-tool (countEvent)="addToOrder(entry, $event)"></app-order-tool>
+    </app-menu-item>
   </app-gold-box>
 
   <section class="flex w-full space-x-2">
-    <app-button type="secondary" class="w-2/5">Menu</app-button>
-    <app-button class="w-3/4">View Order</app-button>
+    <app-button (click)="menuClicked()" type="secondary" class="w-2/5"
+      >Menu</app-button
+    >
+    <app-button (click)="viewOrderClicked()" class="w-3/4"
+      >View Order</app-button
+    >
   </section>
 </article>
