@@ -50,6 +50,23 @@
 
     <section class="my-12">
       <h2 class="font-oleo text-lg">Would you like to add a tip?</h2>
+
+      <section class="flex justify-between w-full">
+        <section class="flex justify-between flex-initial space-x-2">
+          <app-chip
+            *ngFor="let elem of getTips()"
+            [selected]="elem.selected"
+            (click)="tipTypeChosen(elem)"
+            >{{ elem.text }}</app-chip
+          >
+        </section>
+
+        <p class="text-primary-gold">
+          {{ getTip() | currency: "ZAR":"symbol-narrow":"1.2-2" }}
+        </p>
+      </section>
+
+      <p *ngIf="isCustomTip()">Custom Tip Chosen</p>
     </section>
 
     <section class="flex w-full justify-between font-oleo">

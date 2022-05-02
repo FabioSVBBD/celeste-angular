@@ -1,0 +1,10 @@
+<button
+  class="flex justify-center w-full px-3 py-[2px] rounded-full font-oleo text-3xs border-[1px]"
+  [ngClass]="
+    selected
+      ? 'text-primary-gold border-primary-gold'
+      : 'text-primary-white border-primary-white'
+  "
+>
+  <ng-content></ng-content>
+</button>

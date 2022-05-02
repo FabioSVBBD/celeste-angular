@@ -14,6 +14,7 @@ import { OrderToolComponent } from './components/order-tool/order-tool.component
 import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.component';
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
 import { OrderItemComponent } from './components/order-item/order-item.component';
+import { ChipComponent } from './components/chip/chip.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { OrderItemComponent } from './components/order-item/order-item.component
     ConfirmPageComponent,
     SummaryPageComponent,
     OrderItemComponent,
+    ChipComponent,
   ],
   imports: [
     BrowserModule,
