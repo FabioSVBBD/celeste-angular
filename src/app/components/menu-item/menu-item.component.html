@@ -2,16 +2,18 @@
   class="w-full normal-case mt-2"
   [ngClass]="{ 'bg-secondary-black rounded-4xl p-4': detailed }"
 >
-  <section class="flex w-full justify-between">
-    <h1 class="text-primary-white font-bold">{{ primary }}</h1>
-    <section *ngIf="detailed" class="flex font-oleo text-primary-gold">
-      <p>
-        {{ price | currency: "ZAR":"symbol-narrow":"1.2-2" }}
-      </p>
-      <p *ngIf="selected">&nbsp;&bull;</p>
+  <section (click)="toggleContent()">
+    <section class="flex w-full justify-between">
+      <h1 class="text-primary-white font-bold">{{ primary }}</h1>
+      <section *ngIf="detailed" class="flex font-oleo text-primary-gold">
+        <p>
+          {{ price | currency: "ZAR":"symbol-narrow":"1.2-2" }}
+        </p>
+        <p *ngIf="selected">&nbsp;&bull;</p>
+      </section>
     </section>
+    <h2 class="text-primary-grey">{{ secondary }}</h2>
   </section>
-  <h2 class="text-primary-grey">{{ secondary }}</h2>
 
-  <ng-content></ng-content>
+  <ng-content *ngIf="showContent"></ng-content>
 </article>

@@ -1,1 +1,25 @@
-<p>desserts-page works!</p>
+<article class="flex flex-col items-center w-full h-full p-8 space-y-8">
+  <app-title class="text-2xl font-oleo">Starters</app-title>
+
+  <app-gold-box>
+    <app-menu-item
+      *ngFor="let entry of getDesserts()"
+      [primary]="entry.title"
+      [secondary]="entry.description"
+      [price]="entry.price"
+      [detailed]="true"
+      [selected]="itemAddedToOrder(entry.title)"
+    >
+      <app-order-tool (countEvent)="addToOrder(entry, $event)"></app-order-tool>
+    </app-menu-item>
+  </app-gold-box>
+
+  <section class="flex w-full space-x-2">
+    <app-button (click)="menuClicked()" type="secondary" class="w-2/5"
+      >Menu</app-button
+    >
+    <app-button (click)="viewOrderClicked()" class="w-3/4"
+      >View Order</app-button
+    >
+  </section>
+</article>

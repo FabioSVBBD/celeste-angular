@@ -14,7 +14,13 @@ export class MenuItemComponent implements OnInit {
   @Input() detailed: boolean = false;
   @Input() selected: boolean = false;
 
+  showContent: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggleContent() {
+    this.showContent = !this.showContent;
+  }
 }
