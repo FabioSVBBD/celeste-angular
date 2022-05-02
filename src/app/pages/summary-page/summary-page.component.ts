@@ -18,17 +18,20 @@ export class SummaryPageComponent implements OnInit {
     return state[tastingMenu];
   }
 
-  // rewrite this (map or reduce)
   getCarteData(): { name: string; amount: number; quantity: number }[] {
-    let retVal: { name: string; amount: number; quantity: number }[] = [];
+    return Object.entries(state).reduce(
+      (
+        accumulated: { name: string; amount: number; quantity: number }[],
+        [key, value]
+      ) => {
+        if (key !== tastingMenu) {
+          accumulated.push(value);
+        }
 
-    Object.keys(state).forEach((key) => {
-      if (key !== tastingMenu) {
-        retVal.push(state[key]);
-      }
-    });
-
-    return retVal;
+        return accumulated;
+      },
+      [] as { name: string; amount: number; quantity: number }[]
+    );
   }
 
   getTotal(): number {
