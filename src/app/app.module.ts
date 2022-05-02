@@ -18,6 +18,7 @@ import { ChipComponent } from './components/chip/chip.component';
 import { ConclusionPageComponent } from './pages/common/conclusion-page/conclusion-page.component';
 import { ConclusionLeavesComponent } from './components/conclusion-leaves/conclusion-leaves.component';
 import { HomeComponent as CarteMenuHome } from './pages/carte-journey/home/home.component';
+import { FatButtonComponent } from './components/fat-button/fat-button.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HomeComponent as CarteMenuHome } from './pages/carte-journey/home/home.
     ConclusionPageComponent,
     ConclusionLeavesComponent,
     CarteMenuHome,
+    FatButtonComponent,
   ],
   imports: [
     BrowserModule,
