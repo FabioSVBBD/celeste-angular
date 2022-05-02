@@ -1,1 +1,17 @@
-<p>starters-page works!</p>
+<article class="flex flex-col items-center w-full h-full p-8 space-y-8">
+  <app-title class="text-2xl font-oleo">Starters</app-title>
+
+  <app-gold-box>
+    <app-menu-item
+      primary="Grilled Peaches"
+      secondary="Grilled peach, goat's cheese, peach chutney, rocket, mixed seed crackers and onion ash"
+      [price]="150"
+      [detailed]="true"
+    ></app-menu-item>
+  </app-gold-box>
+
+  <section class="flex w-full space-x-2">
+    <app-button type="secondary" class="w-2/5">Menu</app-button>
+    <app-button class="w-3/4">View Order</app-button>
+  </section>
+</article>

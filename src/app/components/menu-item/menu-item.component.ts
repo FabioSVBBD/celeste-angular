@@ -8,13 +8,13 @@ const DEFAULT = 'default';
   styleUrls: ['./menu-item.component.css'],
 })
 export class MenuItemComponent implements OnInit {
-  @Input() primary: string;
-  @Input() secondary: string;
+  @Input() primary: string = DEFAULT;
+  @Input() secondary: string = DEFAULT;
+  @Input() price: number = 0;
+  @Input() detailed: boolean = false;
+  @Input() selected: boolean = false;
 
-  constructor() {
-    this.primary = DEFAULT;
-    this.secondary = DEFAULT;
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
