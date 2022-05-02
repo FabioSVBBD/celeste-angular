@@ -2,10 +2,18 @@
   <app-title class="text-2xl font-oleo">A La Carte Menu</app-title>
 
   <section class="flex flex-col items-center w-11/12 space-y-12">
-    <app-fat-button class="w-full">Starters</app-fat-button>
-    <app-fat-button class="w-full">Mains</app-fat-button>
-    <app-fat-button class="w-full">Desserts</app-fat-button>
+    <app-fat-button (click)="menuClicked(menuOptions().starters)" class="w-full"
+      >Starters</app-fat-button
+    >
+    <app-fat-button (click)="menuClicked(menuOptions().mains)" class="w-full"
+      >Mains</app-fat-button
+    >
+    <app-fat-button (click)="menuClicked(menuOptions().desserts)" class="w-full"
+      >Desserts</app-fat-button
+    >
   </section>
 
-  <app-button class="w-11/12">View Order</app-button>
+  <app-button (click)="viewOrderClicked()" class="w-11/12"
+    >View Order</app-button
+  >
 </article>
