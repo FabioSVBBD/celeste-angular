@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { state } from '../../../assets/state/state';
+import { state } from '../../../../assets/state/state';
 
 const tastingMenu = 'tastingMenu';
 

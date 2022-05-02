@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { state } from '../../../assets/state/state';
+import { state } from '../../../../assets/state/state';
 
 @Component({
   selector: 'app-confirm-page',

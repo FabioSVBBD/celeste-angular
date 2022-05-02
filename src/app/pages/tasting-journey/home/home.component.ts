@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { menu } from '../../../assets/data/tasting-menu';
-import { state } from '../../../assets/state/state';
+import { menu } from '../../../../assets/data/tasting-menu';
+import { state } from '../../../../assets/state/state';
 
 @Component({
   selector: 'app-home',

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TitleComponent } from '../components/title/title.component';
 
 @Component({
   selector: 'app-landing-page',
