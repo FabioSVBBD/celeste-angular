@@ -1,1 +1,19 @@
-<p>conclusion-page works!</p>
+<article class="flex flex-col justify-between items-center w-full h-full p-8">
+  <section class="flex flex-col mt-16">
+    <app-title class="text-3xl font-oleo text-center"
+      >Thank you, <br />
+      {{ user.name }}</app-title
+    >
+
+    <section class="text-left text-md mt-8">
+      <p>
+        Your order will be brought to table <b>{{ table }}</b> shortly
+      </p>
+      <p>
+        Your invoice has been sent to <b>{{ user.email }}</b>
+      </p>
+    </section>
+  </section>
+
+  <app-button (click)="homeClicked()" class="w-full">Home</app-button>
+</article>
