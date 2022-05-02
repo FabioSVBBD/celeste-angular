@@ -26,6 +26,9 @@ module.exports = {
         oleo: ["OleoScript"],
         raleway: ["Raleway"],
       },
+      borderRadius: {
+        "4xl": "2rem",
+      },
     },
   },
 };

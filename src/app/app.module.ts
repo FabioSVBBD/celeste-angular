@@ -17,6 +17,7 @@ import { OrderItemComponent } from './components/order-item/order-item.component
 import { ChipComponent } from './components/chip/chip.component';
 import { ConclusionPageComponent } from './pages/common/conclusion-page/conclusion-page.component';
 import { ConclusionLeavesComponent } from './components/conclusion-leaves/conclusion-leaves.component';
+import { HomeComponent as CarteMenuHome } from './pages/carte-journey/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +36,14 @@ import { ConclusionLeavesComponent } from './components/conclusion-leaves/conclu
     ChipComponent,
     ConclusionPageComponent,
     ConclusionLeavesComponent,
+    CarteMenuHome,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent },
       { path: 'tasting-menu', component: TastingMenuHome },
+      { path: 'a-la-carte', component: CarteMenuHome },
       { path: 'confirm', component: ConfirmPageComponent },
       { path: 'summary', component: SummaryPageComponent },
       { path: 'conclusion', component: ConclusionPageComponent },
