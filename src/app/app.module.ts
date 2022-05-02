@@ -15,6 +15,7 @@ import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.componen
 import { SummaryPageComponent } from './pages/summary-page/summary-page.component';
 import { OrderItemComponent } from './components/order-item/order-item.component';
 import { ChipComponent } from './components/chip/chip.component';
+import { ConclusionPageComponent } from './pages/conclusion-page/conclusion-page.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ChipComponent } from './components/chip/chip.component';
     SummaryPageComponent,
     OrderItemComponent,
     ChipComponent,
+    ConclusionPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { ChipComponent } from './components/chip/chip.component';
       { path: 'tasting-menu', component: TastingMenuHome },
       { path: 'confirm', component: ConfirmPageComponent },
       { path: 'summary', component: SummaryPageComponent },
+      { path: 'conclusion', component: ConclusionPageComponent },
     ]),
   ],
   providers: [],

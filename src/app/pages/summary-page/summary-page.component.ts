@@ -1,5 +1,5 @@
-import { getInterpolationArgsLength } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { state } from '../../../assets/state/state';
 
 const tastingMenu = 'tastingMenu';
@@ -8,7 +8,11 @@ const tips = {
   ten: { text: '10%', value: 0.1, selected: false },
   fifteen: { text: '15%', value: 0.15, selected: true },
   twenty: { text: '20%', value: 0.2, selected: false },
-  custom: { text: 'Custom', value: undefined, selected: false },
+  custom: {
+    text: 'Custom',
+    value: undefined as number | undefined,
+    selected: false,
+  },
 };
 
 @Component({
@@ -21,7 +25,7 @@ export class SummaryPageComponent implements OnInit {
   hasCarteData: boolean = true;
   tip: number;
 
-  constructor() {
+  constructor(private router: Router) {
     this.tip = this.getTip();
   }
 
@@ -73,14 +77,23 @@ export class SummaryPageComponent implements OnInit {
   }
 
   getTip(): number {
-    const percentage =
-      Object.values(tips).find((value) => value.selected)?.value || 0;
+    const selectedTip = Object.values(tips).find((value) => value.selected);
+    const value = selectedTip?.value || 0;
 
-    return percentage * this.getTotalBeforeTip();
+    return selectedTip === tips.custom
+      ? value
+      : value * this.getTotalBeforeTip();
+  }
+
+  setCustomTip(value: string) {
+    tips.custom.value = Math.min(
+      Math.max(parseInt(value), 0),
+      this.getTotalBeforeTip()
+    );
   }
 
   payClicked() {
-    console.log('Pay with Vodapay clicked', state);
+    this.router.navigate(['conclusion']);
   }
 
   ngOnInit(): void {}
