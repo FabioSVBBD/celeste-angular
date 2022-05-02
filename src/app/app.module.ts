@@ -19,6 +19,9 @@ import { ConclusionPageComponent } from './pages/common/conclusion-page/conclusi
 import { ConclusionLeavesComponent } from './components/conclusion-leaves/conclusion-leaves.component';
 import { HomeComponent as CarteMenuHome } from './pages/carte-journey/home/home.component';
 import { FatButtonComponent } from './components/fat-button/fat-button.component';
+import { StartersPageComponent } from './pages/carte-journey/starters-page/starters-page.component';
+import { MainsPageComponent } from './pages/carte-journey/mains-page/mains-page.component';
+import { DessertsPageComponent } from './pages/carte-journey/desserts-page/desserts-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { FatButtonComponent } from './components/fat-button/fat-button.component
     ConclusionLeavesComponent,
     CarteMenuHome,
     FatButtonComponent,
+    StartersPageComponent,
+    MainsPageComponent,
+    DessertsPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +52,9 @@ import { FatButtonComponent } from './components/fat-button/fat-button.component
       { path: '', component: LandingPageComponent },
       { path: 'tasting-menu', component: TastingMenuHome },
       { path: 'a-la-carte', component: CarteMenuHome },
+      { path: 'a-la-carte/starters', component: StartersPageComponent },
+      { path: 'a-la-carte/mains', component: MainsPageComponent },
+      { path: 'a-la-carte/desserts', component: DessertsPageComponent },
       { path: 'confirm', component: ConfirmPageComponent },
       { path: 'summary', component: SummaryPageComponent },
       { path: 'conclusion', component: ConclusionPageComponent },

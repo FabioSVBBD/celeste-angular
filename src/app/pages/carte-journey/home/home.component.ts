@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { menu } from 'src/assets/data/tasting-menu';
 
 const menuOptions = {
-  starters: 'Starters',
-  mains: 'Mains',
-  desserts: 'Desserts',
+  starters: 'starters',
+  mains: 'mains',
+  desserts: 'desserts',
 };
 
 @Component({
@@ -27,6 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   menuClicked(type: string) {
-    console.log(`routing to /a-la-carte/${type}`);
+    this.router.navigate(['a-la-carte', type]);
   }
 }
