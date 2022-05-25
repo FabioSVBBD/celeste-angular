@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Orderable } from '../../../interfaces/Orderable';
+import { Orderable } from '../../../interfaces/orderable';
 import { menu } from '../../../../assets/data/a-la-carte-menu';
 
 @Component({

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { menu } from '../../../../assets/data/a-la-carte-menu';
-import { Orderable } from 'src/app/interfaces/Orderable';
+import { Orderable } from 'src/app/interfaces/orderable';
 
 @Component({
   selector: 'app-starters-page',
